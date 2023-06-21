@@ -1,0 +1,567 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #eeeeee;
+    height: 100%;
+}
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+    height: 100%;
+}
+h2{
+    font-size: 36px;
+    width: 100%;
+    text-align: center;
+}
+
+/* HEADER */
+
+header {
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 80px;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+}
+.side{
+    width: 15%;
+}
+.centerside{
+    width: 70%;
+}
+.midheader{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    color: #eeeeee;
+    font-size: 24px;
+    font-weight: bold;
+}
+.contacts{
+    display: flex;
+    width: 50%;
+    justify-content: end;
+    font-size: 18px;
+}
+.adress{
+    color: #eeeeee;
+    padding-right: 5%;
+    text-align: end;
+}
+.phone{
+    color: #eeeeee;
+    text-align: end;
+}
+
+@media screen and (min-width: 960px) and (max-width: 1199px) {
+    .logo{
+        font-size: 20px;
+    }
+    .contacts{
+        display: flex;
+        width: 50%;
+        justify-content: end;
+        font-size: 14px;
+    }
+    h2{
+        font-size: 28px;
+    }
+    .side{
+        width: 8%;
+    }
+    .centerside{
+        width: 84%;
+    }
+    .midheader{
+        width: 84%;
+    }
+}
+
+@media screen and (min-width: 375px) and (max-width: 959px) {
+    .logo{
+        font-size: 16px;
+    }
+    .contacts{
+        flex-direction: column;
+        justify-content: end;
+        font-size: 10px;
+    }
+    h2{
+        font-size: 16px;
+    }
+    .side{
+        width: 4%;
+    }
+    .centerside{
+        width: 92%;
+    }
+    .midheader{
+        width: 92%;
+    }
+    header {
+        position: absolute;
+        height: 60px;
+    }
+    .adress{
+        font-size: 10px;
+        padding-right: 0;
+    }
+    .phone{
+        font-size: 10px;
+    }
+}
+
+/* ABOUT US */
+
+main{
+    width: 100%;
+}
+.aboutus{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    max-height: 480px;
+}
+.background {
+    margin-top: -80px;
+    position: absolute;
+    width: 100%;
+    top:0;
+    bottom:0;
+    background-image: url(party.png);
+    background-size: cover;
+    background-position: center;
+    filter: blur(2px);
+    z-index: -1;
+}
+.aboutus-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+	margin-bottom: 30px;
+    width: 100%;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+	margin-top: 90px;
+    width: 100%;
+}
+.buttona {
+    margin-top: 28px;
+    margin-bottom: 28px;
+    display: inline-block;
+    color: black;
+    background-color:  rgba(255, 255, 255, 0.3);
+    font-weight: 700;
+    padding: .5em 2em;
+    outline: none;
+    border: 2px solid;
+    border-radius: 8px;
+    transition: 0.2s;
+    text-decoration: none; 
+} 
+.buttona:hover { 
+    background: rgba(255, 255, 255, 0.5);
+    color: #000;
+}
+.buttona:active { 
+    background: rgba(0, 0, 0, 0.5);
+    transition: 0.1s; 
+}
+.aboutus-details h2{
+    color: #eeeeee;
+    width:60%;
+	font-size: 44px;
+    font-weight: 900;
+    text-transform: uppercase;
+	font-family: 'Montserrat', sans-serif;
+	margin-bottom: 25px;
+    text-align: center;
+}
+.aboutus-details p{
+    color: #eeeeee;
+	width: 50%;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+@media screen and (min-width: 960px) and (max-width: 1199px) {
+    .aboutus-details h2{
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+    .aboutus-details p{
+        margin-bottom: -4px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 375px) and (max-width: 959px) {
+    .aboutus-details h2{
+        font-size: 20px;
+        margin-bottom: 12px;
+        width: 90%;
+    }
+    .aboutus-details p{
+        margin-bottom: -4px;
+        font-size: 12px;
+        width: 90%;
+    }
+}
+
+/* GALLERY */
+
+.bottompart{
+    display: flex;
+    margin-top: 80px;
+}
+.gallery{
+    display: flex;
+    flex-direction: column;
+}
+.gallery-phones{
+    display: none;
+}
+.photorow{
+    display: flex;
+    flex-direction: row;
+}
+.photorow img{
+    width: 30%;
+    margin-right: 5%;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 4px #444;
+}
+.photorow img:hover{
+    margin-right: 5%;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 16px #2f475e;
+    transition: 0.2s;
+}
+
+@media screen and (min-width: 375px) and (max-width: 959px) {
+    .gallery{
+        display: none;
+    }
+    .gallery-phones{
+        display: flex;
+        flex-direction: column;
+    }
+    .photorow img{
+        width: 47.5%;
+        margin-right: 5%;
+        margin-bottom: 20px;
+        border-radius: 6px;
+        box-shadow: 0 0 3px #444;
+    }
+}
+
+/* ADVANTAGE */
+
+.advantage{
+    margin-top: 80px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.advantage-phone{
+    display: none;
+}
+.advantage-background {
+    position: absolute;
+    width: 100%;
+    top:0;
+    bottom:0;
+    background-image: url(cases.png);
+    background-size: cover;
+    background-position: center;
+    filter: blur(2.5px);
+    z-index: -1;
+}
+.advantage-aboutus-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+	margin-bottom: 30px;
+    width: 70%;
+}
+.advantage-case-column{
+    width: 32.33%;
+}
+.void{
+    width: 1.5%;
+}
+.advantage-case{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:baseline;
+    min-height: 230px;
+    margin-bottom: 10px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.advantage-aboutus-details h2{
+    color: #eeeeee;
+    font-weight: 900;
+    text-transform: uppercase;
+	font-family: 'Montserrat', sans-serif;
+	margin-bottom: 28px;
+}
+.advantage-aboutus-details h4{
+    color: #eeeeee;
+	font-size: 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+	font-family: 'Montserrat', sans-serif;
+	margin-bottom: 0px;
+}
+.advantage-aboutus-details p{
+    color: #eeeeee;
+	margin-bottom: 26px;
+}
+
+@media screen and (min-width: 960px) and (max-width: 1199px) {
+    .advantage-aboutus-details{
+        width: 84%;
+        margin-top: 40px;
+    }
+    .advantage-case-column{
+        width: 31.33%;
+    }
+    .void{
+        width: 3%;
+    }
+    .advantage-case{
+        min-height: 220px;
+    }
+    .advantage img{
+        width: 52px;
+    }
+    .advantage-aboutus-details h4{
+        font-size: 18px;
+        min-height: 2.5em;
+    }
+    .advantage-aboutus-details p{
+        font-size: 16px;
+    }
+    .bottompart{
+        margin-top: 40px;
+    }
+}
+
+@media screen and (min-width: 375px) and (max-width: 959px) {
+    .advantage{
+        display: none;
+    }
+    .advantage-phone{
+        margin-top: 20px;
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+    .advantage-aboutus-details{
+        width: 92%;
+        margin-top: 20px;
+    }
+    .advantage-case-column{
+        width: 47%;
+        margin-right: 6%;
+    }
+    .advantage-case-column2{
+        width: 47%;
+        margin-right: 3%;
+    }
+    .advantage-case{
+        min-height: 200px;
+    }
+    .advantage img{
+        width: 32px;
+    }
+    .advantage-aboutus-details h4{
+        font-size: 12px;
+        min-height: 2.5em;
+    }
+    .advantage-aboutus-details p{
+        font-size: 12px;
+    }
+    .bottompart{
+        margin-top: 20px;
+    }
+}
+
+/* COST */
+
+.prices{
+    display: flex;
+    width: 100%;
+}
+.weekday{
+    width: 50%;
+    /* text-align: center; */
+}
+.weekday h3{
+    font-size: 24px;
+}
+.weekday p{
+    font-size: 16px;
+}
+
+@media screen and (min-width: 375px) and (max-width: 959px) {
+    .weekday h3{
+        font-size: 20px;
+    }
+    .weekday p{
+        font-size: 12px;
+    }
+    p{
+        font-size: 12px;
+    }
+}
+
+/* MAP */
+
+.bottompart-b{
+    display: flex;
+    margin-top: 80px;
+    background-color: #1b1b1b;
+}
+.bottompart-b h3{
+    color: #dfdfdf;
+}
+.bottompart-b h2{
+    color: #dfdfdf;
+}
+.bottompart-b p{
+    color: #dfdfdf;
+}
+.mapblock{
+    display: flex;
+}
+.map{
+    margin-bottom: 40px;
+    width: 60%;
+}
+.map2{
+    display: none;
+    margin-bottom: 40px;
+    width: 60%;
+}
+.map3{
+    display: none;
+    margin-bottom: 40px;
+    width: 45%;
+}
+.map-description{
+    margin-left: 3%;
+    width: 37%;
+}
+
+@media screen and (min-width: 960px) and (max-width: 1199px) {
+    .map{
+        display: none;
+    }
+    .map2{
+        display: block;
+    }
+    .map3{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 375px) and (max-width: 959px) {
+    .map{
+        display: none;
+    }
+    .map2{
+        display: none;
+    }
+    .map3{
+        display: block;
+    }
+    .bottompart-b h3{
+        color: #dfdfdf;
+        font-size: 14px;
+    }
+    .bottompart-b h2{
+        color: #dfdfdf;
+    }
+    .bottompart-b p{
+        color: #dfdfdf;
+        font-size: 12px;
+    }
+    .map-description{
+        margin-left: 5%;
+        width: 50%;
+    }
+}
+
+/* FOOTER */
+
+footer{
+    height: 120px;
+    width: 100%;
+    background-color: #252525;
+    display: flex;
+}
+.midfooter{
+    width: 70%;
+    display: flex;
+    justify-content: space-between!important;
+    align-items: center;
+}
+.medias{
+    display: flex;
+}
+.avito{
+    height: 36px;
+}
+footer a{
+    line-height: 120px;
+    text-decoration: none; 
+    color: #afafaf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (min-width: 375px) and (max-width: 959px) {
+    footer{
+        height: 80px;
+    }
+    .avito{
+        height: 24px;
+    }
+    footer a{
+        line-height: 80px;
+        font-size: 12px;
+    }
+    .midfooter{
+        width: 92%;
+    }
+}
