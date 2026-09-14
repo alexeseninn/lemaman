@@ -19,6 +19,10 @@ h2{
     text-align: center;
 }
 
+.actio{
+    color: red;
+}
+
 /* HEADER */
 
 header {
@@ -77,6 +81,9 @@ header {
         justify-content: end;
         font-size: 14px;
     }
+    .minititle{
+        font-size: 30px;
+    }
     h2{
         font-size: 28px;
     }
@@ -99,6 +106,9 @@ header {
         flex-direction: column;
         justify-content: end;
         width: 60%;
+    }
+    .minititle{
+        font-size: 30px;
     }
     h2{
         font-size: 28px;
@@ -144,7 +154,7 @@ main{
     width: 100%;
     top:0;
     bottom:0;
-    background-image: url(party.png);
+    background-image: url(images/party.png);
     background-size: cover;
     background-position: center;
     filter: blur(1.6px) brightness(0.7);
@@ -187,7 +197,7 @@ main{
     background: rgba(0, 0, 0, 0.5);
     transition: 0.1s; 
 }
-.aboutus-details h2{
+.aboutus-details .minititle{
     color: #eeeeee;
     width:60%;
 	font-size: 44px;
@@ -197,21 +207,26 @@ main{
 	margin-bottom: 25px;
     text-align: center;
 }
-.aboutus-details p{
+.aboutus-details h2{
+    font-weight: 300;
+	font-family: 'Montserrat', sans-serif;
+	margin-bottom: 0px;
+    text-align: center;
+    font-size: 16px;
+    text-transform: none;
     color: #eeeeee;
 	width: 50%;
     text-align: center;
-    margin-bottom: 0px;
 }
 
 @media screen and (min-width: 960px) and (max-width: 1199px) {
     .aboutus-details h2{
-        font-size: 24px;
-        margin-bottom: 12px;
-    }
-    .aboutus-details p{
         margin-bottom: -4px;
         font-size: 14px;
+    }
+    .aboutus-details .minititle{
+        font-size: 24px;
+        margin-bottom: 12px;
     }
 }
 
@@ -228,14 +243,13 @@ main{
         width: 100%;
     }
     .aboutus-details h2{
-        font-size: 28px;
-        margin-bottom: 24px;
-        width: 90%;
-    }
-    .aboutus-details p{
         margin-bottom: -4px;
         font-size: 16px;
         width: 90%;
+    }
+    .aboutus-details .minititle{
+        font-size: 22px;
+        margin-bottom: 12px;
     }
     .buttona {
         margin-top: 60px;
@@ -326,7 +340,7 @@ main{
     width: 100%;
     top:0;
     bottom:0;
-    background-image: url(cases.png);
+    background-image: url(images/cases.png);
     background-size: cover;
     background-position: center;
     filter: blur(2.5px);
@@ -512,7 +526,7 @@ main{
     margin-bottom: 40px;
     width: 45%;
 }
-.map-description{
+.map-desc{
     margin-left: 3%;
     width: 37%;
 }
@@ -550,7 +564,7 @@ main{
         color: #dfdfdf;
         font-size: 12px;
     }
-    .map-description{
+    .map-desc{
         margin-left: 5%;
         width: 50%;
     }
@@ -559,7 +573,6 @@ main{
 /* FOOTER */
 
 footer{
-    height: 120px;
     width: 100%;
     background-color: #252525;
     display: flex;
